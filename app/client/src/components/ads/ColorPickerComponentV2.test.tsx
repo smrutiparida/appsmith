@@ -203,6 +203,7 @@ describe("<ColorPicker /> - Keyboard Navigation", () => {
     userEvent.keyboard("{ArrowRight}");
     userEvent.keyboard("{Enter}");
     expect(onColorChange).toBeCalled();
+    userEvent.keyboard("{Escape}");
     await waitForElementToBeRemoved(screen.queryByTestId("color-picker"));
   }, 10000);
 });
